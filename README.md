@@ -1,5 +1,5 @@
 # ng2-basic-workshop
-Angular2 Workshop (2hour + 1h QA)
+Angular2 Workshop (2 hour + 1h QA)
 
 1. Install
 
@@ -25,3 +25,4 @@ Angular2 Workshop (2hour + 1h QA)
 - @Input()
 - (click)=“addTask_()”
 - EventEmitter
+
