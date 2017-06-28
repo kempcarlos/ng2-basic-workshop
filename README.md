@@ -24,12 +24,10 @@ Reference: https://angular.io/guide/ngmodule#ngmodules
 
     - bootstrap: launch the application by bootstrapping the root AppModule. https://angular.io/guide/bootstrapping#the-bootstrap-array
 
-    - exports:
+    - exports: the main application view, called the root component, that hosts all other app views. Only the root module should set this bootstrap property https://angular.io/guide/architecture#modules
 
-    - providers: 
-   
-   - Explain each property in the @Module annotation
-   
+    - providers:  creators of services that this module contributes to the global collection of services; they become accessible in all parts of the app. https://angular.io/guide/architecture#modules
+      
 - Components
    - Explain each property in the @Component annotation
 - Injectables(Services)
