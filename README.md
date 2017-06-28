@@ -12,7 +12,15 @@ Angular2 Workshop (2 hour + 1h QA)
 5. Create the Todo List Page
 5.1 - Basic Concepts
 - Modules
+
+NgModules help organize an application into cohesive blocks of functionality.
+
+(bullets) An NgModule is a class adorned with the @NgModule decorator function. @NgModule takes a metadata object that tells Angular how to compile and run module code. It identifies the module's own components, directives, and pipes, making some of them public so external components can use them.   
+Reference: https://angular.io/guide/ngmodule#ngmodules
+   
+   
    - Explain each property in the @Module annotation
+   
 - Components
    - Explain each property in the @Component annotation
 - Injectables(Services)
