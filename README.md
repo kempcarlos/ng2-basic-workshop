@@ -10,8 +10,8 @@ Angular2 Workshop (2 hour + 1h QA)
 4. Create Routes
 
 5. Create the Todo List Page
-5.1 - Basic Concepts
-- Angular Module
+# 5.1 - Basic Concepts
+## Angular Module
 
 NgModules help organize an application into cohesive blocks of functionality.
 
@@ -20,9 +20,6 @@ NgModules help organize an application into cohesive blocks of functionality.
 - **Metadata** describes the module behavior:
     - How to compile and run the module code;
     - Its own components, directives and pipes;
-- Can be defined as public for external usage, i.e., exported; 
-Reference: https://angular.io/guide/ngmodule#ngmodules
-
 - **Metadata** properties allowed for **NgModules**:
     - imports: used to specify other Angular modules. Modules classes decorated with @NgModule
     ~~It tells Angular about specific other Angular modules — all of them classes decorated with @NgModule — that the application needs to function properly~~ https://angular.io/guide/bootstrapping#the-imports-array
@@ -38,11 +35,13 @@ Reference: https://angular.io/guide/ngmodule#ngmodules
 
     - providers:  used to expose a global collection of services, accessible across all parts of the app. 
     ~~creators of services that this module contributes to the global collection of services; they become accessible in all parts of the app.~~ https://angular.io/guide/architecture#modules
+- Can be defined as public for external usage, i.e., exported; 
+Reference: https://angular.io/guide/ngmodule#ngmodules
       
-- Components
+## Components
    - Explain each property in the @Component annotation
-- Injectables(Services)
-- Views
+## Injectables(Services)
+## Views
 5.2. - One way vs Two way binding
 5.3. - New Syntax
 5.4. - Lifecycle Hooks
