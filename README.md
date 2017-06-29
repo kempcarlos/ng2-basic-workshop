@@ -1,13 +1,51 @@
 # ng2-basic-workshop
 Angular2 Workshop (2 hour + 1h QA)
 
-1. Install
+## 1. Install
 
-2. Bootstrap project with Angular CLI
+## 2. Create the project with Angular CLI
 
-3. Create Component
+## 3. Launch the project with ng serve
 
-4. Create Routes
+## 4. Create Page Components with Angular CLI
+
+## 5. Create the Routes
+
+## 6. Create the To-do List Page
+
+## 7. Rewind! What’s happening here!? Architecture overview.
+
+(display image) https://angular.io/generated/images/guide/architecture/overview2.png 
+### 1.	Metadata(intro): https://angular.io/guide/architecture#metadata
+-	Metadata tells Angular how to process a class(…)
+
+### 2.	Modules: https://angular.io/guide/architecture#modules
+-	Go to app.module.ts and talk about modules metadata
+
+### 3.	Angular Libraries: https://angular.io/guide/architecture#angular-libraries
+-	Talk about imports declared in app.module.ts
+
+### 4.	Components: https://angular.io/guide/architecture#components
+-	Go to todo-list.component.ts talk about the metadata and lifecycle hooks
+
+### 5.	Templates: https://angular.io/guide/architecture#templates
+-	Go to todo-list.component.html talk about the template syntax
+-	Talk about data-binding here or in a dedicated topic?
+
+### 6.	Data binding: https://angular.io/guide/architecture#data-binding
+
+### 7.	Directives?: https://angular.io/guide/architecture#directives
+
+### 8.	Services: https://angular.io/guide/architecture#services
+-	Create a Service to retrieve the list of To-do’s.
+
+### 9.	Dependency injection: https://angular.io/guide/architecture#dependency-injection
+-	Convert the Service into an injectable.
+
+
+
+
+
 
 5. Create the Todo List Page
 # 5.1 - Basic Concepts
