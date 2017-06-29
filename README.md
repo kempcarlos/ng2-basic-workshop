@@ -23,7 +23,7 @@ NgModules help organize an application into cohesive blocks of functionality.
 - Can be defined as public for external usage, i.e., exported; 
 Reference: https://angular.io/guide/ngmodule#ngmodules
 
-- **Metadata** allowed for **NgModules**:
+- **Metadata** properties allowed for **NgModules**:
     - imports: used to specify other Angular modules. Modules classes decorated with @NgModule
     ~~It tells Angular about specific other Angular modules — all of them classes decorated with @NgModule — that the application needs to function properly~~ https://angular.io/guide/bootstrapping#the-imports-array
   
