@@ -1,18 +1,145 @@
 # ng2-basic-workshop
-Angular2 Workshop (2 hour + 1h QA)
+Angular2 Workshop (2 hours + 1 hour QA)
 
 ## 1. Install
+- install [node](https://nodejs.org/en/)
+
+- install Angular CLI
+
+    `sudo npm install -g @angular/cli`
 
 ## 2. Create the project with Angular CLI
+```
+ng new quick-app
+cd quick-app
+```
 
 ## 3. Launch the project with ng serve
+```
+ng serve
+```
+
+Open: [http://localhost:4200]()
 
 ## 4. Create Page Components with Angular CLI
+```
+ng g component about
+ng g component home
+ng g component todo-list
+```
 
 ## 5. Create the Routes
+- Create Routes File `app.routes.ts`
+
+	```
+	import { Routes } from '@angular/router';
+	
+	import { HomeComponent } from './home/home.component';
+	import { AboutComponent } from './about/about.component';
+	import { TodoListComponent } from './todo-list/todo-list.component';
+	
+	export const routes: Routes = [
+	  { path: '', component: HomeComponent },
+	  { path: 'about', component: AboutComponent },
+	  { path: 'todo-list', component: TodoListComponent },
+	  { path: '**',   redirectTo: '', pathMatch: 'full' }
+	];
+	```
+
+ - Import Route Files in `app.module.ts`
+
+	```
+	(...)
+	import { RouterModule } from '@angular/router';
+	
+	import { routes } from './app.routes';
+	(...)
+	  imports: [
+	    (...)
+	    RouterModule.forRoot(routes)
+	  ],
+	(...)
+	```
+
+ - Insert the router outlet in `app.component.html`
+
+	```
+	<router-outlet></router-outlet>
+	```
+
+- Also add a navigation bar to `app.component.html`
+
+	```
+	<nav>
+	  <a routerLink="/">Home</a>
+	  <a routerLink="/about">About</a>
+	  <a routerLink="/todo-list">Todo List</a>
+	</nav>
+	```
 
 ## 6. Create the To-do List Page
+- Create a list in `todo-list.component.ts`:
+	
+	```
+	export class TodoListComponent implements OnInit {
+	
+	  list: Array<any> = [
+	    { name: 'clean room', done: false },
+	    { name: 'make pancakes', done: false },
+	    { name: 'spend 3 hours on reddit', done: true }
+	  ];
+	
+	(...)
+	```
 
+- Show it in the HTML in `todo-list.component.html`
+ 
+	```
+	<ul>
+	  <li *ngFor="let task of list">
+	    <input type="checkbox" [(ngModel)]="task.done"/>
+	    {{task.name}}
+	  </li>
+	</ul>
+	```
+
+- Allow adding new TODOs
+   - Create **newTask** string  in `todo-list.component.ts`:
+   
+		```
+		export class TodoListComponent implements OnInit {
+		
+			newTask: String = '';
+
+		(...)
+		```
+   - Create an **addTask** Function in `todo-list.component.ts`:
+   
+		```
+		(...)
+		  ngOnInit() {
+		  }
+		
+		  addTask(){
+		    this.list.push({
+		      name: this.newTask,
+		      done: false
+		    });
+
+		    this.newTask = '';
+		  }
+       (...)
+		```
+
+   - Create the Add Task HTML in `todo-list.component.html`
+   
+		```
+		<form>
+		  <input [(ngModel)]="newTask" name="newTask"/>
+		  <button (click)="addTask()" type="submit">Add Task</button>
+		</form>
+		```
+        
 ## 7. Rewind! What’s happening here!? Architecture overview.
 
 (display image) https://angular.io/generated/images/guide/architecture/overview2.png 
