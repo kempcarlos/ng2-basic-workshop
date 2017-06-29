@@ -35,7 +35,7 @@ NgModules help organize an application into cohesive blocks of functionality.
 
     - **providers**:  used to expose a global collection of services, accessible across all parts of the app. 
     ~~creators of services that this module contributes to the global collection of services; they become accessible in all parts of the app.~~ https://angular.io/guide/architecture#modules
-- Can be defined as public for external usage, i.e., exported; 
+- A module can be defined as public for external usage, i.e., exported; 
 
 [Reference to NgModule official doc](https://angular.io/guide/ngmodule#ngmodules)
       
