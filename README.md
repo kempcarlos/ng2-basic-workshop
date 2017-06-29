@@ -142,7 +142,7 @@ ng g component todo-list
         
 ## 7. Rewind! What’s happening here!? Architecture overview.
 
-(display image) https://angular.io/generated/images/guide/architecture/overview2.png 
+![architecture overview](https://angular.io/generated/images/guide/architecture/overview2.png)
 ### 1.	Metadata(intro): https://angular.io/guide/architecture#metadata
 -	Metadata tells Angular how to process a class(…)
 
