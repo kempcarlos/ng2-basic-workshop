@@ -17,12 +17,13 @@ NgModules help organize an application into cohesive blocks of functionality.
 
 ~~(bullets) An NgModule is a class adorned with the @NgModule decorator function. @NgModule takes a metadata object that tells Angular how to compile and run module code. It identifies the module's own components, directives, and pipes, making some of them public so external components can use them.~~ 
 - Angular module is a class adorned with a decorator **@NgModule**;
-- **Metadata** defines:
+- **Metadata** describes the module behavior:
     - How to compile and run the module code;
     - Its own components, directives and pipes;
 - Can be defined as public for external usage, i.e., exported; 
 Reference: https://angular.io/guide/ngmodule#ngmodules
 
+- **Metadata** allowed for **NgModules**:
     - imports: used to specify other Angular modules. Modules classes decorated with @NgModule
     ~~It tells Angular about specific other Angular modules — all of them classes decorated with @NgModule — that the application needs to function properly~~ https://angular.io/guide/bootstrapping#the-imports-array
   
