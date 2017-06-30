@@ -147,7 +147,7 @@ ng g component todo-list
 -	Metadata tells Angular how to process a class(…)
 
 ### 2.	Modules: https://angular.io/guide/architecture#modules
--	Go to app.module.ts and talk about modules metadata
+> Go to app.module.ts and talk about modules metadata
 
 NgModules help organize an application into cohesive blocks of functionality.
 
@@ -175,24 +175,24 @@ NgModules help organize an application into cohesive blocks of functionality.
 [Reference to NgModule official doc](https://angular.io/guide/ngmodule#ngmodules)
 
 ### 3.	Angular Libraries: https://angular.io/guide/architecture#angular-libraries
--	Talk about imports declared in app.module.ts
+> Talk about imports declared in app.module.ts
 
 ### 4.	Components: https://angular.io/guide/architecture#components
--	Go to todo-list.component.ts talk about the metadata and lifecycle hooks
+> Go to todo-list.component.ts talk about the metadata and lifecycle hooks
 
 ### 5.	Templates: https://angular.io/guide/architecture#templates
--	Go to todo-list.component.html talk about the template syntax
--	Talk about data-binding here or in a dedicated topic?
+> Go to todo-list.component.html talk about the template syntax
+> Talk about data-binding here or in a dedicated topic?
 
 ### 6.	Data binding: https://angular.io/guide/architecture#data-binding
 
 ### 7.	Directives?: https://angular.io/guide/architecture#directives
 
 ### 8.	Services: https://angular.io/guide/architecture#services
--	Create a Service to retrieve the list of To-do’s.
+> Create a Service to retrieve the list of To-do’s.
 
 ### 9.	Dependency injection: https://angular.io/guide/architecture#dependency-injection
--	Convert the Service into an injectable.
+> Convert the Service into an injectable.
 
 
 
