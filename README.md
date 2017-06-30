@@ -199,9 +199,9 @@ NgModules help organize an application into cohesive blocks of functionality.
 
 
 
-5. Create the Todo List Page
-# 5.1 - Basic Concepts
-## Angular Module
+# 5. Create the Todo List Page
+## 5.1 - Basic Concepts
+### Angular Module
 
 NgModules help organize an application into cohesive blocks of functionality.
 
@@ -229,10 +229,10 @@ NgModules help organize an application into cohesive blocks of functionality.
 
 [Reference to NgModule official doc](https://angular.io/guide/ngmodule#ngmodules)
       
-## Components
+### Components
    - Explain each property in the @Component annotation
-## Injectables(Services)
-## Views
+### Injectables(Services)
+### Views
 5.2. - One way vs Two way binding
 5.3. - New Syntax
 5.4. - Lifecycle Hooks
