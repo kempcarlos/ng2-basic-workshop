@@ -180,9 +180,13 @@ NgModules help organize an application into cohesive blocks of functionality.
 ### 4.	Components: https://angular.io/guide/architecture#components
 > Go to todo-list.component.ts talk about the metadata and lifecycle hooks
 
-*List of Metadata Properties:*  https://angular.io/api/core/Component#description
+**Components** are the most basic building block of an UI in an Angular application.
 
-*Lifecycle Hooks:* https://angular.io/guide/lifecycle-hooks
+**Component decorator** allows you to mark a class as an Angular component and provide additional metadata that determines how the component should be processed, instantiated and used at runtime.
+- **List of Metadata Properties:**  https://angular.io/api/core/Component#description
+
+- **Lifecycle Hooks**: Lifecycle hooks provide us with an easy way of invoking operation based on the lifecycle of our components.
+https://angular.io/guide/lifecycle-hooks
 
 ### 5.	Templates: https://angular.io/guide/architecture#templates
 > Go to todo-list.component.html talk about the template syntax
