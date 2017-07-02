@@ -177,6 +177,14 @@ NgModules help organize an application into cohesive blocks of functionality.
 ### 3.	Angular Libraries: https://angular.io/guide/architecture#angular-libraries
 > Talk about imports declared in app.module.ts
 
+- Angular ships as a collection of JavaScript modules. You can think of them as library modules.
+- Each Angular library name begins with the **@angular** prefix.
+- You install them with the **npm** package manager and import parts of them with JavaScript **import** statements.
+- For example, import Angular's **Component** decorator from the **@angular/core** library like this:
+```
+import { Component } from '@angular/core';
+```
+
 ### 4.	Components: https://angular.io/guide/architecture#components
 > Go to todo-list.component.ts talk about the metadata and lifecycle hooks
 
