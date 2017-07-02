@@ -180,6 +180,10 @@ NgModules help organize an application into cohesive blocks of functionality.
 ### 4.	Components: https://angular.io/guide/architecture#components
 > Go to todo-list.component.ts talk about the metadata and lifecycle hooks
 
+*List of Metadata Properties:*  https://angular.io/api/core/Component#description
+
+*Lifecycle Hooks:* https://angular.io/guide/lifecycle-hooks
+
 ### 5.	Templates: https://angular.io/guide/architecture#templates
 > Go to todo-list.component.html talk about the template syntax
 > Talk about data-binding here or in a dedicated topic?
