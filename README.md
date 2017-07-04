@@ -238,21 +238,21 @@ Example 2:
 </form>
 ```
 
-#### 6.1. Data binding: https://angular.io/guide/architecture#data-binding
+#### 5.1. Data binding: https://angular.io/guide/architecture#data-binding
 
-- The **{{task.name}}** interpolation displays the component's `task.name` property value within the `<li>` element.
+- The `{{task.name}}` interpolation displays the component's `task.name` property value within the `<li>` element.
 
-- The [task] property binding passes the value of `task` from the parent `TodoListComponent` to the `task` property of the child `TodoItemComponent`.
+- The `[task]` property binding passes the value of `task` from the parent `TodoListComponent` to the `task` property of the child `TodoItemComponent`.
 
-- The **(click)** event binding calls the component's `addTask` method when the user clicks the button `Add Task`.
+- The `(click)` event binding calls the component's `addTask` method when the user clicks the button `Add Task`.
 
-#### 6.2. Directives?: https://angular.io/guide/architecture#directives
+#### 5.2. Directives?: https://angular.io/guide/architecture#directives
 > *ngFor, etc...
 
-### 7. Services: https://angular.io/guide/architecture#services
+### 6. Services: https://angular.io/guide/architecture#services
 > Create a Service to retrieve the list of To-do’s.
 
-### 8. Dependency injection: https://angular.io/guide/architecture#dependency-injection
+### 7. Dependency injection: https://angular.io/guide/architecture#dependency-injection
 > Convert the Service into an injectable.
 
 
