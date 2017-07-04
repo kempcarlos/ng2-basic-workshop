@@ -211,6 +211,7 @@ https://angular.io/guide/lifecycle-hooks
 
 ### 5. Templates & Data Binding: https://angular.io/guide/architecture#templates
 > Go to todo-list.component.html talk about the template syntax
+
 Example 1:
 ```
 <ul>
