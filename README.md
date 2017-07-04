@@ -140,7 +140,7 @@ ng g component todo-list
 		</form>
 		```
         
-## 7. Wait a minute... Let's go back to Architecture overview.
+## Wait a minute... Let's go back to Architecture overview.
 
 ![architecture overview](https://angular.io/generated/images/guide/architecture/overview2.png)
 ### 1.	Metadata(intro): https://angular.io/guide/architecture#metadata
