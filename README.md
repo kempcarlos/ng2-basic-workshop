@@ -200,14 +200,14 @@ https://angular.io/guide/lifecycle-hooks
 > Go to todo-list.component.html talk about the template syntax
 > Talk about data-binding here or in a dedicated topic?
 
-#### 5.1 Data binding: https://angular.io/guide/architecture#data-binding
+### 6. Data binding: https://angular.io/guide/architecture#data-binding
 
-#### 5.2 Directives?: https://angular.io/guide/architecture#directives
+### 7. Directives?: https://angular.io/guide/architecture#directives
 
-### 6.	Services: https://angular.io/guide/architecture#services
+### 8. Services: https://angular.io/guide/architecture#services
 > Create a Service to retrieve the list of To-do’s.
 
-#### 6.1. Dependency injection: https://angular.io/guide/architecture#dependency-injection
+### 9. Dependency injection: https://angular.io/guide/architecture#dependency-injection
 > Convert the Service into an injectable.
 
 
