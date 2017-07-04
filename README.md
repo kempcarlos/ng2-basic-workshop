@@ -258,9 +258,11 @@ Example 2:
 - Angular processes all data bindings once per JavaScript event cycle, from the root of the application component tree through all child components.
 
 ![component-databinding](https://angular.io/generated/images/guide/architecture/component-databinding.png)
+
 Data binding plays an important role in communication between a template and its component.
 
 ![parent-child-binding](https://angular.io/generated/images/guide/architecture/parent-child-binding.png)
+
 Data binding is also important for communication between parent and child components.
 
 #### 5.2. Directives?: https://angular.io/guide/architecture#directives
@@ -272,9 +274,11 @@ Data binding is also important for communication between parent and child compon
 ### 7. Dependency injection: https://angular.io/guide/architecture#dependency-injection
 > Convert the Service into an injectable.
 
+### 9. Angular Internals
+- **Change Detection**: https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
 
-
-
+### 8. Do's and Dont's
+_I think an interesting topic would be what we do in Angular 1 that we would like to do in Angular 2 but shouldn't_
 
 
 
