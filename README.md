@@ -247,6 +247,22 @@ Example 2:
 
 - The `(click)` event binding calls the component's `addTask` method when the user clicks the button `Add Task`.
 
+- Two-way data binding is an important fourth form that combines property and event binding in a single notation, using the `ngModel` directive. Here's an example from the TodoListComponent template:
+
+```
+<input [(ngModel)]="newTask" name="newTask"/>
+```
+
+- In two-way binding, a data property value flows to the input box from the component as with property binding. The user's changes also flow back to the component, resetting the property to the latest value, as with event binding.
+
+- Angular processes all data bindings once per JavaScript event cycle, from the root of the application component tree through all child components.
+
+![component-databinding](https://angular.io/generated/images/guide/architecture/component-databinding.png)
+Data binding plays an important role in communication between a template and its component.
+
+![parent-child-binding](https://angular.io/generated/images/guide/architecture/parent-child-binding.png)
+Data binding is also important for communication between parent and child components.
+
 #### 5.2. Directives?: https://angular.io/guide/architecture#directives
 > *ngFor, etc...
 
