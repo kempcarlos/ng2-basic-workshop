@@ -140,7 +140,7 @@ ng g component todo-list
 		</form>
 		```
         
-## 7. Rewind! What’s happening here!? Architecture overview.
+## 7. Wait a minute... Let's go back to Architecture overview.
 
 ![architecture overview](https://angular.io/generated/images/guide/architecture/overview2.png)
 ### 1.	Metadata(intro): https://angular.io/guide/architecture#metadata
@@ -196,18 +196,18 @@ import { Component } from '@angular/core';
 - **Lifecycle Hooks**: Lifecycle hooks provide us with an easy way of invoking operation based on the lifecycle of our components.
 https://angular.io/guide/lifecycle-hooks
 
-### 5.	Templates: https://angular.io/guide/architecture#templates
+### 5. Templates: https://angular.io/guide/architecture#templates
 > Go to todo-list.component.html talk about the template syntax
 > Talk about data-binding here or in a dedicated topic?
 
-### 6.	Data binding: https://angular.io/guide/architecture#data-binding
+#### 5.1 Data binding: https://angular.io/guide/architecture#data-binding
 
-### 7.	Directives?: https://angular.io/guide/architecture#directives
+#### 5.2 Directives?: https://angular.io/guide/architecture#directives
 
-### 8.	Services: https://angular.io/guide/architecture#services
+### 6.	Services: https://angular.io/guide/architecture#services
 > Create a Service to retrieve the list of To-do’s.
 
-### 9.	Dependency injection: https://angular.io/guide/architecture#dependency-injection
+#### 6.1. Dependency injection: https://angular.io/guide/architecture#dependency-injection
 > Convert the Service into an injectable.
 
 
