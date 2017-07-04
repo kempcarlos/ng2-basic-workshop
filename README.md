@@ -186,8 +186,11 @@ import { Component } from '@angular/core';
 ```
 
 ### 4.	Components: https://angular.io/guide/architecture#components
-> Go to todo-list.component.ts talk about the metadata and lifecycle hooks
+> Components are the most basic building block of an UI in an Angular application.
 
+**Component decorator** allows you to mark a class as an Angular component and provide additional metadata that determines how the component should be processed, instantiated and used at runtime.
+
+- For example, **todo-list.component.ts** uses **selector**, **templateUrl** and **styleUrls** metadata properties and the lifecycle hook **OnInit**.
 ```
 @Component({
   selector: 'app-todo-list',
@@ -200,11 +203,7 @@ export class TodoListComponent implements OnInit {
 
 }
 ```
-- For example, **todo-list.component.ts** uses **selector**, **templateUrl** and **styleUrls** metadata properties and the lifecycle hook **OnInit**.
 
-**Components** are the most basic building block of an UI in an Angular application.
-
-**Component decorator** allows you to mark a class as an Angular component and provide additional metadata that determines how the component should be processed, instantiated and used at runtime.
 - **List of Metadata Properties:**  https://angular.io/api/core/Component#description
 
 - **Lifecycle Hooks**: Lifecycle hooks provide us with an easy way of invoking operation based on the lifecycle of our components.
