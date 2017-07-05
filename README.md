@@ -278,7 +278,7 @@ There are three kinds of directives in Angular:
 
 **Structural directives** - change the structure of the view(DOM layout) by adding and removing DOM elements. Two examples are `NgFor` and `NgIf`.
 
-`*ngFor` tells Angular to stamp out one <li> per task in the task list.
+`*ngFor` tells Angular to stamp out one `<li>` per task in the task list.
 
 `*ngIf` includes the task component only if a task is not done.
 
