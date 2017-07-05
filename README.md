@@ -276,7 +276,7 @@ There are three kinds of directives in Angular:
 
 **Components—directives** - A component is a `directive-with-a-template`. A `@Component` decorator is actually a `@Directive` decorator **extended** with template-oriented features.
 
-**Structural directives** - change the structure of the view(DOM layout) by adding and removing DOM elements. Two examples are `NgFor` and `NgIf`.
+**Structural directives** - change the structure of the view(DOM layout) by adding and removing DOM elements. Two examples of _built-in structural directives_ are `NgFor` and `NgIf`.
 
 `*ngFor` tells Angular to stamp out one `<li>` per task in the task list.
 
@@ -291,6 +291,13 @@ Example:
 ```
 
 **Attribute directives** — change the appearance or behavior of an element, component, or another directive.
+Used to listen to and modify the behavior of other HTML elements, attributes, properties, and components. They are usually applied to elements as if they were HTML attributes, hence the name.
+
+The three most commonly used  _built-in attribute directives_ are `NgClass`, `NgStyle` and `NgModel`.
+
+`NgClass` - add and remove a set of CSS classes
+`NgStyle` - add and remove a set of HTML styles
+`NgModel` - two-way data binding to an HTML form element back to top
 
 https://angular.io/guide/attribute-directives#attribute-directives
 
