@@ -268,6 +268,32 @@ Data binding is also important for communication between parent and child compon
 #### 5.2. Directives?: https://angular.io/guide/architecture#directives
 > *ngFor, etc...
 
+_Angular templates are dynamic_. When Angular renders them, it transforms the DOM according to the instructions given by **directives**.
+
+A `directive` is a class with a `@Directive` decorator.
+
+There are three kinds of directives in Angular:
+
+**Components—directives** - A component is a `directive-with-a-template`. A `@Component` decorator is actually a `@Directive` decorator **extended** with template-oriented features.
+
+**Structural directives** - change the structure of the view(DOM layout) by adding and removing DOM elements. Two examples are `NgFor` and `NgIf`.
+
+`*ngFor` tells Angular to stamp out one <li> per task in the task list.
+
+`*ngIf` includes the task component only if a task is not done.
+
+Example:
+
+```
+<li *ngFor="let task of list">
+  <app-todo-item *ngIf="!task.done" [task]="task"></app-todo-item>
+</li>
+```
+
+**Attribute directives** — change the appearance or behavior of an element, component, or another directive.
+
+https://angular.io/guide/attribute-directives#attribute-directives
+
 ### 6. Services: https://angular.io/guide/architecture#services
 > Create a Service to retrieve the list of To-do’s.
 
