@@ -291,12 +291,13 @@ Example:
 ```
 
 **Attribute directives** — change the appearance or behavior of an element, component, or another directive.
-Used to listen to and modify the behavior of other HTML elements, attributes, properties, and components. They are usually applied to elements as if they were HTML attributes, hence the name.
 
-The three most commonly used  _built-in attribute directives_ are `NgClass`, `NgStyle` and `NgModel`.
+_Attribute directives_ listen to and modify the behavior of other HTML elements, attributes, properties, and components. They are usually applied to elements as if they were HTML attributes, hence the name. Three most commonly used  _built-in attribute directives_ are `NgClass`, `NgStyle` and `NgModel`.
 
 `NgClass` - add and remove a set of CSS classes
+
 `NgStyle` - add and remove a set of HTML styles
+
 `NgModel` - two-way data binding to an HTML form element back to top
 
 https://angular.io/guide/attribute-directives#attribute-directives
