@@ -339,20 +339,57 @@ export class Logger {
 
 ### 7. Dependency injection: https://angular.io/guide/architecture#dependency-injection
 
-- Dependency injection is a way to supply a new instance of a class with the fully-formed dependencies it requires. 
+Dependency injection is a way to supply a new instance of a class with the fully-formed dependencies it requires. 
 
-- Angular uses dependency injection to provide new components with the services they need.
+Angular uses dependency injection to provide new components with the services they need.
 
-- Angular can tell which services a component needs by looking at the types of its constructor parameters. 
+Angular can tell which services a component needs by looking at the types of its constructor parameters. 
 
-For example, the constructor of your TodoListComponent needs a TodoListService:
+For example, the constructor of your `TodoListComponent` needs a `TodoListService`:
 
 ```
-constructor(private service: HeroService) { }
+constructor(private service: TodoListService) { }
 ```
 
+When Angular creates a component, it first asks an injector for the services that the component requires.
 
-Angular can tell which services a component needs by looking at the types of its constructor parameters. For example, the constructor of your HeroListComponent needs a HeroService:
+**How dependency injection works?**
+An `injector` maintains a container of service instances that it has previously created. If a requested service instance is not in the container, the injector makes one and adds it to the container before returning the service to Angular. When all requested services have been resolved and returned, Angular can call the component's constructor with those services as arguments. **This is dependency injection.**
+
+If the injector doesn't have a `TodoListService`, how does it know how to make one?
+
+In brief, you must have previously registered a provider of the `TodoListService` with the injector. A provider is something that can create or return a service, typically the service class itself.
+
+You can register providers in modules or in components.
+
+
+- Add the `TodoListervice` to the array of `providers` of the root module in the file `src/app/app.module.ts`.
+
+```
+providers: [
+  (...)
+  TodoListervice,
+  (...)
+],
+```
+
+This way the same instance of a service is available everywhere.
+
+- Alternatively, register at a component level in the `providers` property of the `@Component` metadata, in file `src/app/todo-list.component.ts`:
+
+```
+@Component({
+  selector:    'app-todo-list',
+  templateUrl: './todo-list.component.html',
+  providers:  [ TodoListService ]
+})
+```
+
+Registering at a component level means you get a new instance of the service with each new instance of that component.
+
+#### 7.1. Why @Injectable()?
+> LoggerService and 
+
 
 ### 9. Angular Internals
 - **Change Detection**: https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
