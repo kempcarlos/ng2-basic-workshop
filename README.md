@@ -388,7 +388,7 @@ This way the same instance of a service is available everywhere.
 Registering at a component level means you get a new instance of the service with each new instance of that component.
 
 #### 7.1. Why @Injectable()?
-> LoggerService and 
+> LoggerService
 
 
 ### 9. Angular Internals
