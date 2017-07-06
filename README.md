@@ -303,10 +303,56 @@ _Attribute directives_ listen to and modify the behavior of other HTML elements,
 https://angular.io/guide/attribute-directives#attribute-directives
 
 ### 6. Services: https://angular.io/guide/architecture#services
-> Create a Service to retrieve the list of To-do’s.
+
+- Almost anything can be a service. A service is typically a class with a narrow, well-defined purpose. It should do something specific and do it well.
+
+- There is nothing specifically Angular about services. Angular has no definition of a service. There is no service base class, and no place to register a service.
+
+- Yet services are fundamental to any Angular application. Components are big consumers of services.
+
+#### 6.1. Create a service class that fetch's the list of task's
+
+```
+export class TodoListService {
+  getTasks(){
+     return Promise.resolve([
+	    { name: 'clean room', done: false },
+	    { name: 'make pancakes', done: false },
+	    { name: 'spend 3 hours on reddit', done: true }
+	  ]);
+  }
+}
+```
+
+#### 6.2 Create another service class that logs to the browser console:
+
+```
+export class Logger {
+  log(msg: any)   { console.log(msg); }
+  error(msg: any) { console.error(msg); }
+  warn(msg: any)  { console.warn(msg); }
+}
+```
+
+- Services are everywhere. Component classes should be lean. They don't fetch data from the server, validate user input, or log directly to the console. They delegate such tasks to services.
+
 
 ### 7. Dependency injection: https://angular.io/guide/architecture#dependency-injection
-> Convert the Service into an injectable.
+
+- Dependency injection is a way to supply a new instance of a class with the fully-formed dependencies it requires. 
+
+- Angular uses dependency injection to provide new components with the services they need.
+
+- Angular can tell which services a component needs by looking at the types of its constructor parameters. 
+
+For example, the constructor of your TodoListComponent needs a TodoListService:
+
+```
+constructor(private service: HeroService) { }
+```
+
+
+Angular can tell which services a component needs by looking at the types of its constructor parameters. For example, the constructor of your HeroListComponent needs a HeroService:
 
 ### 9. Angular Internals
 - **Change Detection**: https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
