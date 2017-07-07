@@ -140,7 +140,7 @@ ng g component todo-list
 		</form>
 		```
         
-## Wait a minute... Let's go back to Architecture overview.
+## Not so fast! Let's go back to Architecture overview.
 
 ![architecture overview](https://angular.io/generated/images/guide/architecture/overview2.png)
 ### 1.	Metadata(intro): https://angular.io/guide/architecture#metadata
@@ -388,7 +388,75 @@ This way the same instance of a service is available everywhere.
 Registering at a component level means you get a new instance of the service with each new instance of that component.
 
 #### 7.1. Why @Injectable()?
-> LoggerService
+
+As you noticed, you could have omitted `@Injectable()` from the first version of `TodoListService` **because it had no injected parameters**. But wyou must have it now that the service has an injected dependency. You need it because Angular requires constructor parameter metadata in order to inject a Logger.
+
+**SUGGESTION:** Add `@Injectable()` TO EVERY SERVICE CLASS. Why?
+
+**Future proofing:** No need to remember `@Injectable()` when you add a dependency later.
+
+**Consistency:** All services follow the same rules, and you don't have to wonder why a decorator is missing.
+
+**CURIOSITY:** Injectors are also responsible for instantiating components like `TodoListComponent`. So why doesn't `TodoListComponent` have `@Injectable()`?
+
+You can add it if you really want to. It isn't necessary because the `TodoListComponent` is already marked with `@Component`, and this decorator class (like `@Directive` and `@Pipe`) is a subtype of `@Injectable()`. It is in fact `@Injectable()` decorators that identify a class as a target for instantiation by an injector.
+
+#### 7.2 Add @Injectable() to services
+> Inject a logger into `TodoListService` in three steps:
+
+- Add `@Injectable()` to both services
+
+```
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class Logger {
+(...)
+}
+```
+
+```
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class TodoListService {
+(...)
+}
+```
+
+- Register it with the application.
+You're likely to need the same logger service everywhere in your application, so register it in the providers array in `app.module.ts`.
+
+```
+providers: [
+(...)
+  Logger,
+(...)
+]
+```
+
+- Declare `Loger`in `TodoListService` constructor
+
+```
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class TodoListService {
+   constructor(Logger: logger) {
+   
+   }
+(...)
+}
+```
+
+
+**WARNINGS:**
+
+- ALWAYS INCLUDE THE PARENTHESES
+> Always write @Injectable(), not just @Injectable. The application will fail mysteriously if you forget the parentheses.
+
+- If you forget to register the logger, Angular throws an exception when it first looks for the logger:
+> EXCEPTION: No provider for Logger! (`TodoListComponent` -> `TodoListService` -> Logger)
 
 
 ### 9. Angular Internals
