@@ -393,6 +393,7 @@ Registering at a component level means you get a new instance of the service wit
 
 ### 9. Angular Internals
 - **Change Detection**: https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
+- **Zones**: https://blog.thoughtram.io/angular/2016/02/01/zones-in-angular-2.html
 
 ### 8. Do's and Dont's
 _I think an interesting topic would be what we do in Angular 1 that we would like to do in Angular 2 but shouldn't_
