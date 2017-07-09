@@ -265,7 +265,7 @@ Data binding plays an important role in communication between a template and its
 
 Data binding is also important for communication between parent and child components.
 
-#### 5.2. Directives?: https://angular.io/guide/architecture#directives
+#### 5.2. Directives: https://angular.io/guide/architecture#directives
 > *ngFor, etc...
 
 _Angular templates are dynamic_. When Angular renders them, it transforms the DOM according to the instructions given by **directives**.
@@ -298,9 +298,60 @@ _Attribute directives_ listen to and modify the behavior of other HTML elements,
 
 `NgStyle` - add and remove a set of HTML styles
 
-`NgModel` - two-way data binding to an HTML form element back to top
+`NgModel` - two-way data binding to an HTML form element
 
 https://angular.io/guide/attribute-directives#attribute-directives
+
+#### 5.3 Input and output properties ( @Input and @Output )
+So far, you've focused mainly on binding to component members within template expressions and statements that appear on the right side of the binding declaration. A member in that position is a data binding source.
+
+This section concentrates on binding to targets, which are directive properties on the left side of the binding declaration. These directive properties must be declared as inputs or outputs.
+
+In the following snippet, `iconUrl` and `addTask` are data-bound members of the `TodoListComponent` and are referenced within quoted syntax to the right of the equals `(=)`.
+
+```
+(...)
+<form>
+  <img [src]="iconUrl"/>
+  <button (click)="addTask()" type="submit">Add Task</button>
+</form>
+
+```
+
+They are neither `inputs` nor `outputs` of the component. They are **sources*** for their bindings. The targets are the native `<img>` and `<button>` elements.
+
+Now look at a another snippet in which the `TodoItemComponent` is the **target** of a binding on the left of the equals `(=)`.
+
+```
+<ul>
+  <li *ngFor="let task of list">
+    <app-todo-item *ngIf="!task.done" [task]="task" (deleteRequest)="deleteTask($event)"></app-todo-item>
+  </li>
+</ul>
+```
+
+Both `TodoItemComponent.task` and `TodoItemComponent.deleteRequest` are on the **left** side of binding declarations. `TodoItemComponent.task` is inside brackets; it is the **target** of a `property` binding. `TodoItemComponent.deleteRequest` is inside parentheses; it is the **target** of an `event` binding.
+
+Target properties must be explicitly marked as inputs or outputs.
+
+In the `TodoItemComponent`, such properties are marked as input or output properties using decorators.
+
+```
+@Input()  task: Task;
+@Output() deleteRequest = new EventEmitter<Task>();
+```
+
+Alternatively, you can identify members in the inputs and outputs arrays of the directive metadata, as in this example:
+
+```
+@Component({
+  inputs: ['task'],
+  outputs: ['deleteRequest']
+})
+```
+
+You can specify an `input/output` property either with a decorator or in a metadata array. **Don't do both!**
+
 
 ### 6. Services: https://angular.io/guide/architecture#services
 
