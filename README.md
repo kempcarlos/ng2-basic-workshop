@@ -144,7 +144,8 @@ export class TodoListComponent implements OnInit {
 		</form>
 		```
         
-## Not so fast! Let's go back to Architecture overview.
+
+## Architecture overview.
 
 ![architecture overview](https://angular.io/generated/images/guide/architecture/overview2.png)
 ### 1.	Metadata(intro): https://angular.io/guide/architecture#metadata
