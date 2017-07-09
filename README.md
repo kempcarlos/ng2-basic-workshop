@@ -9,24 +9,24 @@ Angular2 Workshop (2 hours + 1 hour QA)
     `sudo npm install -g @angular/cli`
 
 ## 2. Create the project with Angular CLI
-```
-ng new quick-app
-cd quick-app
-```
+	```
+	ng new quick-app
+	cd quick-app
+	```
 
 ## 3. Launch the project with ng serve
-```
-ng serve
-```
+	```
+	ng serve
+	```
 
 Open: [http://localhost:4200]()
 
 ## 4. Create Page Components with Angular CLI
-```
-ng g component about
-ng g component home
-ng g component todo-list
-```
+	```
+	ng g component about
+	ng g component home
+	ng g component todo-list
+	```
 
 ## 5. Create the Routes
 - Create Routes File `app.routes.ts`
@@ -191,18 +191,19 @@ import { Component } from '@angular/core';
 **Component decorator** allows you to mark a class as an Angular component and provide additional metadata that determines how the component should be processed, instantiated and used at runtime.
 
 - For example, **todo-list.component.ts** uses **selector**, **templateUrl** and **styleUrls** metadata properties and the lifecycle hook **OnInit**.
-```
-@Component({
-  selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.css']
-})
-export class TodoListComponent implements OnInit {
 
-(...)
+	```
+	@Component({
+	  selector: 'app-todo-list',
+	  templateUrl: './todo-list.component.html',
+	  styleUrls: ['./todo-list.component.css']
+	})
+	export class TodoListComponent implements OnInit {
 
-}
-```
+	(...)
+
+	}
+	```
 
 - **List of Metadata Properties:**  https://angular.io/api/core/Component#description
 
@@ -213,31 +214,33 @@ https://angular.io/guide/lifecycle-hooks
 > Go to todo-list.component.html talk about the template syntax
 
 Example 1:
-```
-<ul>
-  <li *ngFor="let task of list">
-    <input type="checkbox" [(ngModel)]="task.done"/>
-    {{task.name}}
-  </li>
-</ul>
-<form>
-  <input [(ngModel)]="newTask" name="newTask"/>
-  <button (click)="addTask()" type="submit">Add Task</button>
-</form>
-```
+
+	```
+	<ul>
+	  <li *ngFor="let task of list">
+	    <input type="checkbox" [(ngModel)]="task.done"/>
+	    {{task.name}}
+	  </li>
+	</ul>
+	<form>
+	  <input [(ngModel)]="newTask" name="newTask"/>
+	  <button (click)="addTask()" type="submit">Add Task</button>
+	</form>
+	```
 
 Example 2:
-```
-<ul>
-  <li *ngFor="let task of list">
-    <app-todo-item [task]="task"></app-todo-item>
-  </li>
-</ul>
-<form>
-  <input [(ngModel)]="newTask" name="newTask"/>
-  <button (click)="addTask()" type="submit">Add Task</button>
-</form>
-```
+
+	```
+	<ul>
+	  <li *ngFor="let task of list">
+	    <app-todo-item [task]="task"></app-todo-item>
+	  </li>
+	</ul>
+	<form>
+	  <input [(ngModel)]="newTask" name="newTask"/>
+	  <button (click)="addTask()" type="submit">Add Task</button>
+	</form>
+	```
 
 #### 5.1. Data binding: https://angular.io/guide/architecture#data-binding
 
@@ -249,9 +252,9 @@ Example 2:
 
 - Two-way data binding is an important fourth form that combines property and event binding in a single notation, using the `ngModel` directive. Here's an example from the TodoListComponent template:
 
-```
-<input [(ngModel)]="newTask" name="newTask"/>
-```
+	```
+	<input [(ngModel)]="newTask" name="newTask"/>
+	```
 
 - In two-way binding, a data property value flows to the input box from the component as with property binding. The user's changes also flow back to the component, resetting the property to the latest value, as with event binding.
 
@@ -284,11 +287,11 @@ There are three kinds of directives in Angular:
 
 Example:
 
-```
-<li *ngFor="let task of list">
-  <app-todo-item *ngIf="!task.done" [task]="task"></app-todo-item>
-</li>
-```
+	```
+	<li *ngFor="let task of list">
+	  <app-todo-item *ngIf="!task.done" [task]="task"></app-todo-item>
+	</li>
+	```
 
 **Attribute directives** — change the appearance or behavior of an element, component, or another directive.
 
@@ -309,26 +312,26 @@ This section concentrates on binding to targets, which are directive properties 
 
 In the following snippet, `iconUrl` and `addTask` are data-bound members of the `TodoListComponent` and are referenced within quoted syntax to the right of the equals `(=)`.
 
-```
-(...)
-<form>
-  <img [src]="iconUrl"/>
-  <button (click)="addTask()" type="submit">Add Task</button>
-</form>
+	```
+	(...)
+	<form>
+	  <img [src]="iconUrl"/>
+	  <button (click)="addTask()" type="submit">Add Task</button>
+	</form>
 
-```
+	```
 
 They are neither `inputs` nor `outputs` of the component. They are **sources*** for their bindings. The targets are the native `<img>` and `<button>` elements.
 
 Now look at a another snippet in which the `TodoItemComponent` is the **target** of a binding on the left of the equals `(=)`.
 
-```
-<ul>
-  <li *ngFor="let task of list">
-    <app-todo-item *ngIf="!task.done" [task]="task" (deleteRequest)="deleteTask($event)"></app-todo-item>
-  </li>
-</ul>
-```
+	```
+	<ul>
+	  <li *ngFor="let task of list">
+	    <app-todo-item *ngIf="!task.done" [task]="task" (deleteRequest)="deleteTask($event)"></app-todo-item>
+	  </li>
+	</ul>
+	```
 
 Both `TodoItemComponent.task` and `TodoItemComponent.deleteRequest` are on the **left** side of binding declarations. `TodoItemComponent.task` is inside brackets; it is the **target** of a `property` binding. `TodoItemComponent.deleteRequest` is inside parentheses; it is the **target** of an `event` binding.
 
@@ -336,19 +339,19 @@ Target properties must be explicitly marked as inputs or outputs.
 
 In the `TodoItemComponent`, such properties are marked as input or output properties using decorators.
 
-```
-@Input()  task: Task;
-@Output() deleteRequest = new EventEmitter<Task>();
-```
+	```
+	@Input()  task: Task;
+	@Output() deleteRequest = new EventEmitter<Task>();
+	```
 
 Alternatively, you can identify members in the inputs and outputs arrays of the directive metadata, as in this example:
 
-```
-@Component({
-  inputs: ['task'],
-  outputs: ['deleteRequest']
-})
-```
+	```
+	@Component({
+	  inputs: ['task'],
+	  outputs: ['deleteRequest']
+	})
+	```
 
 You can specify an `input/output` property either with a decorator or in a metadata array. **Don't do both!**
 
