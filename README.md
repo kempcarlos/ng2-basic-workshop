@@ -20,7 +20,7 @@ cd quick-app
 ng serve
 ```
 
-Open: [http://localhost:4200]()
+Open: [http://localhost:4200](http://localhost:4200)
 
 ## 4. Create Page Components with Angular CLI
 ```
