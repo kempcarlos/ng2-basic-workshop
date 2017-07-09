@@ -8,6 +8,8 @@
     `sudo npm install -g @angular/cli`
 
 ## 2. Create the project with Angular CLI
+https://github.com/angular/angular-cli/wiki
+
 ```
 ng new quick-app
 cd quick-app
