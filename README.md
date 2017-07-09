@@ -307,6 +307,9 @@ _Attribute directives_ listen to and modify the behavior of other HTML elements,
 
 https://angular.io/guide/attribute-directives#attribute-directives
 
+
+**WARNING**: You can apply many attribute directives to one host element. You can only apply one structural directive to a host element.
+
 #### 5.3 Input and output properties ( @Input and @Output )
 So far, you've focused mainly on binding to component members within template expressions and statements that appear on the right side of the binding declaration. A member in that position is a data binding source.
 
