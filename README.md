@@ -88,9 +88,9 @@ import { routes } from './app.routes';
 export class TodoListComponent implements OnInit {
 
   list: Array<any> = [
-    { name: 'clean room', done: false },
     { name: 'make pancakes', done: false },
-    { name: 'spend 3 hours on reddit', done: true }
+    { name: 'clean kitchen', done: false },
+    { name: 'spend 3 hours watching game of thrones', done: true }
   ];
 
 (...)
