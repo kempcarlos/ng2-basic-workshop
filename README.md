@@ -62,11 +62,14 @@ import { routes } from './app.routes';
 (...)
 ```
 
- - Insert the router outlet in `app.component.html`
+ - Insert the `router outlet` in `app.component.html`
 
 ```
 <router-outlet></router-outlet>
 ```
+ 
+`Router outlet` acts as a placeholder that Angular dynamically fills based on the current router state.
+
 
 - Also add a navigation bar to `app.component.html`
 
