@@ -1,5 +1,4 @@
-# ng2-basic-workshop
-Angular2 Workshop (2 hours + 1 hour QA)
+# Angular2 basic Workshop (2 hours + 1 hour QA)
 
 ## 1. Install
 - install [node](https://nodejs.org/en/)
