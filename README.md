@@ -327,7 +327,7 @@ In the following snippet, `iconUrl` and `addTask` are data-bound members of the 
 
 ```
 
-They are neither `inputs` nor `outputs` of the component. They are **sources*** for their bindings. The targets are the native `<img>` and `<button>` elements.
+They are neither `inputs` nor `outputs` of the component. They are **sources** for their bindings. The targets are the native `<img>` and `<button>` elements.
 
 Now look at a another snippet in which the `TodoItemComponent` is the **target** of a binding on the left of the equals `(=)`.
 
