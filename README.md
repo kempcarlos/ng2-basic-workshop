@@ -156,6 +156,7 @@ export class TodoListComponent implements OnInit {
 NgModules help organize an application into cohesive blocks of functionality.
 
 - Angular module is a class adorned with a decorator **@NgModule**;
+- Decorator is a function that receives a **metadata** object;
 - **Metadata** describes the module behavior:
     - How to compile and run the module code;
     - Its own components, directives and pipes;
